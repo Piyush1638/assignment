@@ -10,6 +10,7 @@ import CoinChart from "@/components/sections/CoinChart";
 import YouMayAlsoLike from "@/components/sections/YouMayAlsoLike";
 
 import { MdKeyboardDoubleArrowRight } from "react-icons/md";
+import TrendingCoins from "@/components/sections/TrendingCoins";
 
 export default function Home() {
   return (
@@ -34,16 +35,17 @@ export default function Home() {
           </div>
           <div className="flex flex-col desktop:w-2/5 w-full gap-5">
             <BlueBox />
-            <div className="laptop:block hidden">
+            <div className="desktop:block hidden">
               <TrendingCoins24 />
             </div>
           </div>
         </div>
       </div>
-      <div>
+      <div className="desktop:block hidden w-full bg-white">
         <YouMayAlsoLike />
+        <TrendingCoins />
       </div>
-      <div className="laptop:hidden block w-full bg-white">
+      <div className="desktop:hidden block w-full bg-white mt-10">
         <TrendingCoins24 />
       </div>
     </main>

@@ -16,16 +16,16 @@ const YouMayAlsoLike = () => {
   const coins = trendingCoins?.coins;
 
   return (
-    <section className="flex flex-col gap-3 bg-white rounded-md px-10 py-6 my-3 w-full">
+    <section className="flex flex-col gap-3 bg-white rounded-md px-10 py-4 my-2 w-full">
       <h3 className="text-2xl font-semibold text-black mb-5">
         You May Also Like
       </h3>
-      <Carousel className="w-full">
-        <CarouselContent className="-ml-1 w-full">
+      <Carousel>
+        <CarouselContent>
           {coins?.map((coin: any, index: number) => (
             <CarouselItem
               key={index}
-              className="md:basis-1/3  xl:basis-1/5 py-2"
+              className="desktop:basis-1/5 tablet:basis-1/3 basis-1/2  py-2"
             >
               <Coin
                 coin={coin.item.small}
@@ -45,17 +45,16 @@ const YouMayAlsoLike = () => {
 
 export default YouMayAlsoLike;
 
-// ?.coins[0]?.item.data.sparkline
-{
-  /* <div className="flex items-center gap-4">
-        {coins?.map((coin: any, index: number) => (
-          <Coin
-            key={index}
-            coin={coin.item.small}
-            name={coin.item.name}
-            price={coin.item.data.price}
-            graph={`${coin.item.data.sparkline}`}
-          />
-        ))}
-      </div> */
-}
+// {coins?.map((coin: any, index: number) => (
+//   <CarouselItem
+//     key={index}
+//     className="md:basis-1/3  xl:basis-1/5 py-2"
+//   >
+//     <Coin
+//       coin={coin.item.small}
+//       name={coin.item.name}
+//       price={coin.item.data.price}
+//       graph={`${coin.item.data.sparkline}`}
+//     />
+//   </CarouselItem>
+// ))}

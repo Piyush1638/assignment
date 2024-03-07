@@ -13,17 +13,15 @@ import SentimentCard from "./SentimentCard";
 
 export function SentimentCarousel() {
   return (
-    // <Carousel className="w-full max-w-sm">
-    //   <CarouselContent className="-ml-1">
-    //     {Array.from({ length: 1 }).map((_, index) => (
-    //       <CarouselItem key={index} className="pl-1 md:basis-1/1 lg:basis-1/2">
-    //         <div className="p-1">
+    // <Carousel className="w-full">
+    //   <CarouselContent className="">
+    //     {Array.from({ length: 5 }).map((_, index) => (
+    //       <CarouselItem key={index} className="tablet:basis-1/2 basis-1/1 py-2">
     //           <SentimentCard
-    //           color="bg-[#bae6fd]"
+    //           color="bg-[#e0f2fe]"
     //           content="Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio, assumenda vel repudiandae suscipit tempora aliquid provident perferendis molestias nemo corrupti! Quod dicta, asperiores fuga possimus odio ea beatae quibusdam temporibus! "
     //           icon={<HiOutlineNewspaper/>}
     //           />
-    //         </div>
     //       </CarouselItem>
     //     ))}
     //   </CarouselContent>
@@ -31,27 +29,33 @@ export function SentimentCarousel() {
     //   <CarouselNext />
     // </Carousel>
     <Carousel>
-      <CarouselContent className="-ml-2 md:-ml-4 md:basis-1/1 lg:basis-1/2">
-        <CarouselItem className="pl-2 md:pl-4">
+      <CarouselContent className="">
+        <CarouselItem className="basis-1/2 py-2">
           <SentimentCard
+            iconBgColor="bg-[#1d4ed8]"
             color="bg-[#bae6fd]"
             content="Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio, assumenda vel repudiandae suscipit tempora aliquid provident perferendis molestias nemo corrupti! Quod dicta, asperiores fuga possimus odio ea beatae quibusdam temporibus! "
             icon={<HiOutlineNewspaper />}
+            title="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Totam, ipsa."
           />
         </CarouselItem>
-        <CarouselItem className="pl-2 md:pl-4">
-        <SentimentCard
-              color="bg-[#bae6fd]"
-              content="Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio, assumenda vel repudiandae suscipit tempora aliquid provident perferendis molestias nemo corrupti! Quod dicta, asperiores fuga possimus odio ea beatae quibusdam temporibus! "
-              icon={<HiOutlineNewspaper/>}
-              />
+        <CarouselItem className="basis-1/2 py-2">
+          <SentimentCard
+            iconBgColor="bg-red-700"
+            color="bg-[#fecdd3]"
+            content="Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio, assumenda vel repudiandae suscipit tempora aliquid provident perferendis molestias nemo corrupti! Quod dicta, asperiores fuga possimus odio ea beatae quibusdam temporibus! "
+            icon={<HiOutlineNewspaper />}
+            title="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Totam, ipsa."
+          />
         </CarouselItem>
-        <CarouselItem className="pl-2 md:pl-4">
-        <SentimentCard
-              color="bg-[#bae6fd]"
-              content="Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio, assumenda vel repudiandae suscipit tempora aliquid provident perferendis molestias nemo corrupti! Quod dicta, asperiores fuga possimus odio ea beatae quibusdam temporibus! "
-              icon={<HiOutlineNewspaper/>}
-              />
+        <CarouselItem className="basis-1/2 py-2">
+          <SentimentCard
+            iconBgColor="bg-[#e0f2fe]"
+            color="bg-[#bae6fd]"
+            content="Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio, assumenda vel repudiandae suscipit tempora aliquid provident perferendis molestias nemo corrupti! Quod dicta, asperiores fuga possimus odio ea beatae quibusdam temporibus! "
+            icon={<HiOutlineNewspaper />}
+            title="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Totam, ipsa."
+          />
         </CarouselItem>
       </CarouselContent>
       <CarouselPrevious />

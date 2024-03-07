@@ -1,5 +1,7 @@
 import Image from "next/image";
 import React from "react";
+import YouMayAlsoLike from "./YouMayAlsoLike";
+import TrendingCoins from "./TrendingCoins";
 
 const Team = () => {
   return (
@@ -10,9 +12,13 @@ const Team = () => {
         tempora explicabo reprehenderit repellat ad deserunt quaerat, neque
         voluptas quo?
       </p>
-      <TeamMember/>
-      <TeamMember/>
-      <TeamMember/>
+      <TeamMember />
+      <TeamMember />
+      <TeamMember />
+      <div className="desktop:hidden block">
+        <YouMayAlsoLike />
+        <TrendingCoins />
+      </div>
     </section>
   );
 };

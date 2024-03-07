@@ -12,7 +12,7 @@ const Sentiment = () => {
             i
           </span>
         </h4>
-        <div className="">
+        <div className="w-full">
           <SentimentCarousel />
         </div>
       </div>

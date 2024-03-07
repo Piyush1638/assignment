@@ -15,7 +15,6 @@ export const useTrendingCoinsStore = create<TrendingCoinsState>((set) => ({
         "https://api.coingecko.com/api/v3/search/trending"
       );
       const data = await response.json();
-      console.log("Trending Coins: ", data);
       set({ trendingCoins: data });
     } catch (error:any) {
       console.error(error.message);
