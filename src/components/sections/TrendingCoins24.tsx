@@ -1,24 +1,38 @@
-"use client"
+"use client";
 import Image from "next/image";
 import React from "react";
 import { GoTriangleUp } from "react-icons/go";
 import { useTrendingCoinsStore } from "../../../store/useTrendingCoinsStore";
 
-
 const TrendingCoins24 = () => {
   const { trendingCoins, fetchTrendingCoins } = useTrendingCoinsStore();
   React.useEffect(() => {
-    fetchTrendingCoins();
-  }, []);
+    const fetchData = async () => {
+      await fetchTrendingCoins();
+    };
 
+    fetchData();
+  }, [fetchTrendingCoins]);
 
   return (
     <section className="tablet:px-10 px-5 tablet:py-5 py-2 rounded-2xl bg-white">
       <h3 className="font-semibold text-xl">Trending Coins {"(24H)"}</h3>
       <div className="flex flex-col gap-3 my-4">
-      <Coin coin={trendingCoins?.coins[0]?.item.small} name={trendingCoins?.coins[0]?.item.name} value="8.5"/>
-      <Coin coin={trendingCoins?.coins[1]?.item.small} name={trendingCoins?.coins[1]?.item.name} value="8.5"/>
-      <Coin coin={trendingCoins?.coins[2]?.item.small} name={trendingCoins?.coins[2]?.item.name} value="8.5"/>
+        <Coin
+          coin={trendingCoins?.coins[0]?.item.small}
+          name={trendingCoins?.coins[0]?.item.name}
+          value="8.5"
+        />
+        <Coin
+          coin={trendingCoins?.coins[1]?.item.small}
+          name={trendingCoins?.coins[1]?.item.name}
+          value="8.5"
+        />
+        <Coin
+          coin={trendingCoins?.coins[2]?.item.small}
+          name={trendingCoins?.coins[2]?.item.name}
+          value="8.5"
+        />
       </div>
     </section>
   );
@@ -41,4 +55,3 @@ const Coin = ({ coin, name, value }: any) => (
     </div>
   </div>
 );
-

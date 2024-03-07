@@ -1,5 +1,3 @@
-// TradingViewWidget.jsx
-"use client"
 import React, { useEffect, useRef, memo } from 'react';
 
 function TradingViewWidget() {
@@ -30,14 +28,15 @@ function TradingViewWidget() {
       }`;
 
     // Check if container.current is defined before attempting to appendChild
-    if (container.current) {
-      container.current.appendChild(script);
+    const currentContainer = container.current;
+    if (currentContainer) {
+      currentContainer.appendChild(script);
     }
 
     // Cleanup the script when the component is unmounted
     return () => {
-      if (container.current) {
-        container.current.removeChild(script);
+      if (currentContainer) {
+        currentContainer.removeChild(script);
       }
     };
 
