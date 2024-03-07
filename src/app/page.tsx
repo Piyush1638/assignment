@@ -31,7 +31,6 @@ export default function Home() {
             <AboutBitcoin />
             <Tokenomics />
             <Team />
-            {/* <YouMayAlsoLike/> */}
           </div>
           <div className="flex flex-col desktop:w-2/5 w-full gap-5">
             <BlueBox />

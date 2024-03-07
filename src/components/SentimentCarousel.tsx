@@ -34,34 +34,3 @@ export function SentimentCarousel() {
   );
 }
 
-
-/*
-
-<SentimentCard
-            iconBgColor="bg-red-700"
-            color="bg-[#fecdd3]"
-            content="Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio, assumenda vel repudiandae suscipit tempora aliquid provident perferendis molestias nemo corrupti! Quod dicta, asperiores fuga possimus odio ea beatae quibusdam temporibus! "
-            icon={<HiOutlineNewspaper />}
-            title="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Totam, ipsa."
-/>
-
- <SentimentCard
-            iconBgColor="bg-[#e0f2fe]"
-            color="bg-[#bae6fd]"
-            content="Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio, assumenda vel repudiandae suscipit tempora aliquid provident perferendis molestias nemo corrupti! Quod dicta, asperiores fuga possimus odio ea beatae quibusdam temporibus! "
-            icon={<HiOutlineNewspaper />}
-            title="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Totam, ipsa."
-          />
-
-
-<SentimentCard
-            iconBgColor="bg-[#1d4ed8]"
-            color="bg-[#bae6fd]"
-            content="Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio, assumenda vel repudiandae suscipit tempora aliquid provident perferendis molestias nemo corrupti! Quod dicta, asperiores fuga possimus odio ea beatae quibusdam temporibus! "
-            icon={<HiOutlineNewspaper />}
-            title="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Totam, ipsa."
-          />
-
-
-
-*/

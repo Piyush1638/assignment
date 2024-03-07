@@ -93,16 +93,3 @@ const TrendingCoins = () => {
 
 export default TrendingCoins;
 
-// {coins?.map((coin: any, index: number) => (
-//   <CarouselItem
-//     key={index}
-//     className="md:basis-1/3  xl:basis-1/5 py-2"
-//   >
-//     <Coin
-//       coin={coin.item.small}
-//       name={coin.item.name}
-//       price={coin.item.data.price}
-//       graph={`${coin.item.data.sparkline}`}
-//     />
-//   </CarouselItem>
-// ))}
