@@ -16,7 +16,7 @@ const YouMayAlsoLike = () => {
   const coins = trendingCoins?.coins;
 
   return (
-    <section className="flex flex-col gap-3 bg-white rounded-md px-10 py-4 my-2 w-full">
+    <section className="flex flex-col gap-3 bg-white rounded-md desktop:px-10 py-4 my-2 w-full">
       <h3 className="text-2xl font-semibold text-black mb-5">
         You May Also Like
       </h3>
@@ -29,7 +29,7 @@ const YouMayAlsoLike = () => {
             >
               <Coin
                 coin={coin.item.small}
-                name={coin.item.name}
+                name={coin.item.symbol}
                 price={coin.item.data.price}
                 graph={`${coin.item.data.sparkline}`}
               />

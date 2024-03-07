@@ -12,9 +12,9 @@ const Sentiment = () => {
             i
           </span>
         </h4>
-        <div className="w-full">
+        {/* <div className="w-full"> */}
           <SentimentCarousel />
-        </div>
+        {/* </div> */}
       </div>
       <div className="flex flex-col w-full my-6">
         <h4 className="font-bold mb-3 flex items-center gap-2 text-lg text-gray-700 ">

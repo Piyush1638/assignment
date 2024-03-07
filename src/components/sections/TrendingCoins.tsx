@@ -55,7 +55,7 @@ const TrendingCoins = () => {
   }, [api]);
 
   return (
-    <section className="flex flex-col gap-3 bg-white rounded-md px-10 w-full desktop:pb-10">
+    <section className="flex flex-col gap-3 bg-white rounded-md desktop:px-10 w-full desktop:pb-10">
       <h3 className="text-2xl font-semibold text-black mb-5">
         Trending Coins
       </h3>
@@ -77,7 +77,7 @@ const TrendingCoins = () => {
             >
               <Coin
                 coin={coin.item.small}
-                name={coin.item.name}
+                name={coin.item.symbol}
                 price={coin.item.data.price}
                 graph={`${coin.item.data.sparkline}`}
               />
