@@ -5,7 +5,7 @@ const Tokenomics = () => {
     const [investerPercentage, setInvesterPercentage] = React.useState(80);
     const [foundationPercentage, setFoundationPercentage] = React.useState(20);
   return (
-    <div className="lg:flex hidden flex-col gap-3 bg-white rounded-md px-5 py-6 my-3">
+    <section className="lg:flex hidden flex-col gap-3 bg-white rounded-md px-5 py-6 my-3">
       <h3 className="text-2xl font-semibold text-black mb-5">About Bitcoin</h3>
       <h4 className="font-semibold">Initial Distribution</h4>
       <div className="flex items-center gap-7">
@@ -37,7 +37,7 @@ const Tokenomics = () => {
         doloribus sint autem debitis sed accusantium voluptatibus, assumenda
         quo. Molestias quia voluptate dolorum magni porro!
       </p>
-    </div>
+    </section>
   );
 };
 

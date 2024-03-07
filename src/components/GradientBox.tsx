@@ -6,7 +6,7 @@ import { MdOutlineArrowForward } from "react-icons/md";
 
 const GradientBox = () => {
   return (
-    <div className="flex gap-3 lg:flex-row flex-col lg:items-center lg:justify-between lg:px-6 px-2 ">
+    <div className="flex gap-3 tablet:flex-row flex-col tablet:items-center tablet:justify-between tablet:px-6 px-2 ">
         <div className="bg-gradient-to-br from-emerald-400  to-blue-700 flex items-center lg:justify-center px-4 py-3 rounded-md gap-3">
           <Image
             src="/assets/images/invest1.png"
@@ -30,7 +30,7 @@ const GradientBox = () => {
           </div>
         </div>
 
-        <div className="bg-gradient-to-br from-red-400  to-red-600 flex items-center justify-center px-4 py-3 rounded-md gap-3">
+        <div className="bg-gradient-to-br from-red-400  to-red-600 flex items-center lg:justify-center px-4 py-3 rounded-md gap-3">
           <Image
             src="/assets/images/invest1.png"
             alt="Investing"

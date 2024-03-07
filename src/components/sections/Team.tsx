@@ -3,7 +3,7 @@ import React from "react";
 
 const Team = () => {
   return (
-    <div className="flex flex-col gap-3 bg-white rounded-md px-5 py-6 my-3">
+    <section className="flex flex-col gap-3 bg-white rounded-md px-5 py-6 my-3">
       <h3 className="text-2xl font-semibold text-black mb-5">Team</h3>
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime veniam
@@ -13,14 +13,14 @@ const Team = () => {
       <TeamMember/>
       <TeamMember/>
       <TeamMember/>
-    </div>
+    </section>
   );
 };
 
 export default Team;
 
 const TeamMember = () => (
-  <div className="bg-[#ebf3fb] px-4 py-2 rounded-xl flex lg:flex-row flex-col items-center justify-center gap-4">
+  <div className="bg-[#ebf3fb] px-4 py-2 rounded-xl flex tablet:flex-row flex-col items-center justify-center gap-4">
     <div className="w-1/2 flex flex-col justify-center items-center">
       <Image
         src="/assets/images/profile.jpg"

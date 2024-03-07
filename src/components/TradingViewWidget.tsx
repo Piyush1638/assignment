@@ -3,36 +3,45 @@
 import React, { useEffect, useRef, memo } from 'react';
 
 function TradingViewWidget() {
-  const container: any = useRef();
+  const container = useRef<HTMLDivElement>(null);
 
-  useEffect(
-    () => {
-      const script = document.createElement("script");
-      script.src = "https://s3.tradingview.com/external-embedding/embed-widget-advanced-chart.js";
-      script.type = "text/javascript";
-      script.async = true;
-      script.innerHTML = `
-        {
-          "autosize": true,
-          "symbol": "NASDAQ:AAPL",
-          "interval": "D",
-          "timezone": "Etc/UTC",
-          "theme": "light",
-          "style": "7",
-          "locale": "en",
-          "enable_publishing": false,
-          "gridColor": "rgba(255, 255, 255, 0.06)",
-          "hide_top_toolbar": true,
-          "allow_symbol_change": true,
-          "save_image": false,
-          "calendar": false,
-          "hide_volume": true,
-          "support_host": "https://www.tradingview.com"
-        }`;
+  useEffect(() => {
+    const script = document.createElement("script");
+    script.src = "https://s3.tradingview.com/external-embedding/embed-widget-advanced-chart.js";
+    script.type = "text/javascript";
+    script.async = true;
+    script.innerHTML = `
+      {
+        "autosize": true,
+        "symbol": "BITSTAMP:BTCUSD",
+        "interval": "D",
+        "timezone": "Etc/UTC",
+        "theme": "light",
+        "style": "2",
+        "locale": "en",
+        "enable_publishing": false,
+        "gridColor": "rgba(255, 255, 255, 0.06)",
+        "hide_top_toolbar": true,
+        "allow_symbol_change": true,
+        "save_image": false,
+        "calendar": false,
+        "hide_volume": true,
+        "support_host": "https://www.tradingview.com"
+      }`;
+
+    // Check if container.current is defined before attempting to appendChild
+    if (container.current) {
       container.current.appendChild(script);
-    },
-    []
-  );
+    }
+
+    // Cleanup the script when the component is unmounted
+    return () => {
+      if (container.current) {
+        container.current.removeChild(script);
+      }
+    };
+
+  }, []);
 
   return (
     <div className="tradingview-widget-container" ref={container} style={{ height: "100%", width: "100%" }}>
