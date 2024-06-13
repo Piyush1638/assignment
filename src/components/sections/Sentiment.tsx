@@ -65,7 +65,7 @@ export default Sentiment;
 
 const Progress = ({ title, percentage, color, width }: any) => (
   <div className="flex items-center gap-3">
-    <p className="tablet:text-base text-sm">{title}</p>
+    <p className="tablet:text-base text-sm w-10">{title}</p>
     <div className="w-full h-2 bg-white rounded-md relative flex items-center gap-2">
       <div className={`h-full ${color} ${width} rounded-md`} />
       <p className="tablet:text-base text-sm">{percentage}</p>

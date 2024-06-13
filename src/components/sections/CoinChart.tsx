@@ -8,6 +8,7 @@ import TradingViewWidget from "../TradingViewWidget";
 const CoinChart = () => {
   const [coinData, setCoinData] = React.useState<any>(null);
   const [selectedOption, setSelectedOption] = React.useState<any>("1H");
+  const [isLoading, setIsLoading] = React.useState(true);
 
   const options = ["1H", "24H", "7D", "1M", "3M", "6M", "1Y", "ALL"];
 
@@ -29,6 +30,14 @@ const CoinChart = () => {
 
   React.useEffect(() => {
     fetchCoinData();
+  }, []);
+
+  // Simulating the TradingViewWidget loading process
+  React.useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 2000); // Simulate a 2-second load time for the TradingViewWidget
+    return () => clearTimeout(timer);
   }, []);
 
   return (
@@ -95,10 +104,15 @@ const CoinChart = () => {
           </div>
         </div>
         <div className="w-full h-5/6 tablet:h-[500px] relative tablet:mt-10 tablet:mb-4 my-8">
-        <TradingViewWidget/>
+          {isLoading ? (
+            <div className="flex items-center justify-center h-full">
+              <div className="h-10 w-10 rounded-full animate-spin border-b border-gray-700" />
+            </div>
+          ) : (
+            <TradingViewWidget />
+          )}
+        </div>
       </div>
-      </div>
-
     </section>
   );
 };

@@ -19,7 +19,7 @@ const Coin = ({coin, name, graph, price}:any) => {
         <div className="bg-green-100 p-1 text-xs">+0.21%</div>
       </div>
       <div className="py-2 flex flex-col gap-2">
-        <p className="tablet:text-xl text-base font-semibold">{price}</p>
+        <p className="tablet:text-xl text-base font-semibold">{Number(price).toFixed(5)}</p>
         <div className="flex items-center justify-center">
           <Image
             src={graph}
