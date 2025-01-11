@@ -4,7 +4,7 @@ import React from "react";
 const Coin = ({coin, name, graph, price}:any) => {
   // console.log("Graph: ",graph)
   return (
-    <div className="flex flex-col gap-2 border-2 border-gray-300 rounded-lg max-w-[220px]  max-sm:w-[160px] px-3 py-3">
+    <div className="flex flex-col gap-2 border-2 border-gray-300 rounded-lg max-w-[300px]  max-sm:w-[160px] px-3 py-3">
       <div className="flex items-center gap-1">
         <div className="h-6 w-6 text-2xl mr-2">
           <Image
@@ -19,7 +19,7 @@ const Coin = ({coin, name, graph, price}:any) => {
         <div className="bg-green-100 p-1 text-xs">+0.21%</div>
       </div>
       <div className="py-2 flex flex-col gap-2">
-        <p className="tablet:text-xl text-base font-semibold">{Number(price).toFixed(5)}</p>
+        <p className="tablet:text-xl text-sm font-semibold">$ {Number(price).toFixed(2)}</p>
         <div className="flex items-center justify-center">
           <Image
             src={graph}

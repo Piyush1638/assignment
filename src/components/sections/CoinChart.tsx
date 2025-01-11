@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import React from "react";
-import { GoTriangleUp } from "react-icons/go";
+import { GoTriangleUp, GoTriangleDown } from "react-icons/go";
 import { Separator } from "@/components/ui/separator";
 import TradingViewWidget from "../TradingViewWidget";
 
@@ -54,7 +54,7 @@ const CoinChart = () => {
             Bitcoin <span className="text-sm font-bold text-gray-700">BTC</span>
           </h3>
         </div>
-        <div className="px-3 py-3 bg-gray-400 rounded-md">
+        <div className="px-3 py-2 bg-[#788294] rounded-md">
           <p className="text-white">Rank #1</p>
         </div>
       </div>
@@ -68,8 +68,14 @@ const CoinChart = () => {
             })}
           </h3>
           <div className="flex items-center">
-            <div className="bg-green-50 tablet:text-base text-sm laptop:mx-10 mx-4 px-2 py-1 rounded-md text-green-700 font-semibold flex items-center gap-1">
-              <GoTriangleUp />
+            <div
+              className={` tablet:text-base text-sm laptop:mx-10 mx-4 px-2 py-1 rounded-md ${ coinData?.usd_24h_change < 0 ? "text-red-500 bg-red-50":"text-green-500 bg-green-50"} font-semibold flex items-center gap-1`}
+            >
+              {coinData?.usd_24h_change < 0 ? (
+                <GoTriangleDown />
+              ) : (
+                <GoTriangleUp />
+              )}
               {coinData?.usd_24h_change.toFixed(2)}%
             </div>
             <p className="text-sm">{"(24H)"}</p>

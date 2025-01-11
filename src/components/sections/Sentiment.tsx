@@ -1,5 +1,7 @@
+"use client"
 import React from "react";
 import { SentimentCarousel } from "../SentimentCarousel";
+import AnalyticsEstimateGraph from "../AnalyticsEstimateGraph";
 
 const Sentiment = () => {
   return (
@@ -21,7 +23,10 @@ const Sentiment = () => {
             i
           </span>
         </h4>
-        <div className="flex items-center tablet:gap-4 gap-2">
+        <div className="w-full">
+          <AnalyticsEstimateGraph/>
+        </div>
+        {/* <div className="flex items-center tablet:gap-4 gap-2">
           <div>
             <div className="tablet:h-32 tablet:w-32 h-24 w-24 bg-green-100 rounded-full flex items-center justify-center tablet:mx-6">
               <h3 className="text-3xl  text-green-600">
@@ -55,7 +60,7 @@ const Sentiment = () => {
               />
             </div>
           </div>
-        </div>
+        </div> */}
       </div>
     </section>
   );

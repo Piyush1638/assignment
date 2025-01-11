@@ -36,7 +36,7 @@ const TeamMember = () => (
         className="object-cover my-3 h-[150px] w-[150px] aspect-[3/2] rounded-xl"
       />
       <h3 className="font-semibold ">John Smith</h3>
-      <p>Designation here</p>
+      <p className="text-sm text-gray-500">Designation here</p>
     </div>
     <p>
       Lorem ipsum, dolor sit amet consectetur adipisicing elit. Porro eveniet

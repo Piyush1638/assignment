@@ -15,10 +15,11 @@ import TrendingCoins from "@/components/sections/TrendingCoins";
 export default function Home() {
   return (
     <main className=" min-h-screen ">
-      <div className="h-full w-full bg-slate-100 flex flex-col items-center justify-between py-9 px-5 laptop:px-10 laptop:py-24">
+      <div className="h-full w-full bg-slate-100 flex flex-col items-center justify-between py-9 px-5 laptop:px-8 laptop:py-24">
         <div className="flex items-center justify-start w-full">
           <p className="flex items-center font-semibold text-sm text-gray-600 mt-12 mb-5 tablet:mt-0 tablet:mb-3">
-            Cryptocurriences <MdKeyboardDoubleArrowRight />
+            <span className="font-normal"> Cryptocurriences</span>{" "}
+            <MdKeyboardDoubleArrowRight />
             <span className="font-semibold text-black">Bitcoin</span>
           </p>
         </div>
