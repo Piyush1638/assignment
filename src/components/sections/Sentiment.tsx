@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import React from "react";
 import { SentimentCarousel } from "../SentimentCarousel";
 import AnalyticsEstimateGraph from "../AnalyticsEstimateGraph";
@@ -24,56 +24,11 @@ const Sentiment = () => {
           </span>
         </h4>
         <div className="w-full">
-          <AnalyticsEstimateGraph/>
+          <AnalyticsEstimateGraph />
         </div>
-        {/* <div className="flex items-center tablet:gap-4 gap-2">
-          <div>
-            <div className="tablet:h-32 tablet:w-32 h-24 w-24 bg-green-100 rounded-full flex items-center justify-center tablet:mx-6">
-              <h3 className="text-3xl  text-green-600">
-                76<span className="text-lg ">%</span>
-              </h3>
-            </div>
-          </div>
-          <div className="flex flex-col gap-4 w-full">
-            <div className="flex flex-col gap-4 w-full">
-              <Progress
-                title="Buy"
-                percentage="76%"
-                color="bg-green-600"
-                width="w-[76%]"
-              />
-            </div>
-            <div className="flex flex-col gap-4 w-full">
-              <Progress
-                title="Hold"
-                percentage="20%"
-                color="bg-gray-300"
-                width="w-[20%]"
-              />
-            </div>
-            <div className="flex flex-col gap-4 w-full">
-              <Progress
-                title="Sell"
-                percentage="8%"
-                color="bg-red-600"
-                width="w-[8%]"
-              />
-            </div>
-          </div>
-        </div> */}
       </div>
     </section>
   );
 };
 
 export default Sentiment;
-
-const Progress = ({ title, percentage, color, width }: any) => (
-  <div className="flex items-center gap-3">
-    <p className="tablet:text-base text-sm w-10">{title}</p>
-    <div className="w-full h-2 bg-white rounded-md relative flex items-center gap-2">
-      <div className={`h-full ${color} ${width} rounded-md`} />
-      <p className="tablet:text-base text-sm">{percentage}</p>
-    </div>
-  </div>
-);

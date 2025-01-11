@@ -1,4 +1,10 @@
-import { Chart as ChartJS, ArcElement, Tooltip, Legend, Colors } from "chart.js";
+import {
+  Chart as ChartJS,
+  ArcElement,
+  Tooltip,
+  Legend,
+  Colors,
+} from "chart.js";
 import { Doughnut } from "react-chartjs-2";
 
 ChartJS.register(ArcElement, Tooltip, Legend);
@@ -27,13 +33,16 @@ const DoughnutChart = ({
       legend: {
         position: "right" as const,
         labels: {
-          usePointStyle: true, 
+          usePointStyle: true,
           font: {
             size: 14,
             color: "black",
             fontWeight: "bold",
           },
         },
+      },
+      datalabels: {
+        display: false, // Remove labels from doughnut chart
       },
       tooltip: {
         callbacks: {
